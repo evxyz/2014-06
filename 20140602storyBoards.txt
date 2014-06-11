@@ -1,0 +1,35 @@
+StoryBoards 
+
+Storyboard as a collection of mini .xibs and transitions and/or relationships between them.
+
+
+Storyboard is just a text document formatted in a special way that defines an object graph of your application UI, and which iOS interprets at runtime to render the UI elements, based on the rules specified in the document. This XML file keeps track of all the attributes for every UI element in the Storyboard as well as transitions and/or relationships between them.
+
+
+
+Basic Storyboard created by the Xcode for Single View Application template is almost identical to any regular .xib file. 
+
+First Responder is a placeholder object that represents the first object in the responder chain. 
+In iOS applications, there is no single First Responder object— the First Responder is always the View that is the target of a touch, which is typically the currently selected object or the object with the current focus in the frontmost window.
+
+two main concepts in Storyboarding: scene and segue.
+
+Scene is a View Controller that either represents a screen in the app or just one major component area
+
+Segue defines navigation in your Storyboard. 
+
+
+You can have multiple Storyboards in your app. You just need to specify the name of the main one in your [appName]-Info.plist under the “Main storyboard file base name” key, which has the default value MainStoryboard.
+
+start with a View Controller object that represents your first scene (the initial View Controller). 
+
+Each View Controller always manages a single scene of your app.
+
+each scene represents the contents of a single screen.
+
+iPad applications, a screen can be composed of the contents of more than one scene
+
+classic scenario: a Master-Detail application where you display some data in a Table View, and when user taps on a cell, a Detail View is presented that displays additional information about the selection. In this case you must send a reference to the selected object to the Detail View so it knows exactly what to display.
+
+
+
